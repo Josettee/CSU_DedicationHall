@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/router/Router",
+    "pages/Sign_Page/Sign_Page",
     "pages/Form_Page/Form_Page",
     "pages/Read_Page/Read_Page",
-    "pages/Sign_Page/Sign_Page"
+    "pages/To_Sign_Page/To_Sign_Page"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

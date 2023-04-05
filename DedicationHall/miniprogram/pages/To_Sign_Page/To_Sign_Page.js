@@ -1,11 +1,11 @@
-// pages/Sign_Page/Sign_Page.js
+// pages/To_Sign_Page/To_Sign_Page.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
