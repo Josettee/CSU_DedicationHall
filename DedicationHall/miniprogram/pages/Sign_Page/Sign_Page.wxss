@@ -1,0 +1,13 @@
+canvas{
+    background-color: aqua;
+    margin-top: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.container{
+    /*background-image: url(./sign_area.png);*/
+    background-color: rgb(234, 235, 235);
+    width: 100%;
+    height: 100%;
+}
