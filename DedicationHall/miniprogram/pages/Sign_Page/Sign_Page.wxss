@@ -1,13 +1,41 @@
-canvas{
+.canvas{
     background-color: aqua;
-    margin-top: 5%;
     margin-left: 0%;
     margin-right: 0%;
+    position: absolute;
 }
 
 .container{
-    /*background-image: url(./sign_area.png);*/
-    background-color: rgb(234, 235, 235);
+    margin-top: 9%;
+    width: 100%;
+    position: absolute;
+}
+
+.root{
+    background-image: url(https://s1.ax1x.com/2023/04/09/ppbuMAe.png);
+    background-size: 100% 100%;
     width: 100%;
     height: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.btn{
+    display: flex;
+    z-index: 100;
+    width: 80%;
+}
+
+.submit{
+    background-image: url(https://s1.ax1x.com/2023/04/10/ppqhjNq.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+.clear{
+    background-image: url(https://s1.ax1x.com/2023/04/10/ppq5WfP.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
 }

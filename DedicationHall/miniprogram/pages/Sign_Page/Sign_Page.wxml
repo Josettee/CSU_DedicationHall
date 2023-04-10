@@ -1,14 +1,25 @@
 <!--index.wxml-->
-<view class="container">
-  <canvas canvas-id="firstCanvas" style="height:{{height+'px'}}" id='firstCanvas' bindtouchstart="bindtouchstart" bindtouchmove="bindtouchmove"></canvas>
-  <view class="btn">
- 
-    <button type="warn" bindtap='clear'>
-      清除
-    </button>
-    <button type="primary"  bindtap='export'>
-      提交
-    </button>
+<view class="root">
+  <view class="container">
+    <view >
+      <canvas canvas-id="firstCanvas" 
+      style="height:{{(height*0.75)+'px'}};width:{{width+'px'}}" 
+      id='firstCanvas' 
+      bindtouchstart="bindtouchstart" 
+      bindtouchmove="bindtouchmove"
+      bindtouchend="bindtouchend"
+      >
+      </canvas>
+    </view>
+    <view class="btn">
+      <button class="submit" hidden="{{ifhidden}}" bindtap='export' style="width: 90px;height:36px">
+        
+      </button>
+      <button class="clear" hidden="{{ifhidden}}" style="width: 90px;height:36px" bindtap='clear'>
+        
+      </button>
+      
+    </view>
+  
   </view>
- 
 </view>
