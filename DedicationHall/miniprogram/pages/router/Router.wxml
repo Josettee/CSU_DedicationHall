@@ -3,4 +3,5 @@
 <navigator url="../Form_Page/Form_Page" hover-class="navigator-hover">Form_Page</navigator>
 <navigator url="../Read_Page/Read_Page" hover-class="navigator-hover">Read_Page</navigator>
 <navigator url="../Sign_Page/Sign_Page" hover-class="navigator-hover">Sign_Page</navigator>
-<navigator url="../To_Sign_Page/To_Sign_Page" hover-class="navigator-hover">To_Sign_Page</navigator>
+<navigator url="../END/END" hover-class="navigator-hover">END
+</navigator>

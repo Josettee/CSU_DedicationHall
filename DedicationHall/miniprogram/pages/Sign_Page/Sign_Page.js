@@ -9,12 +9,16 @@ Page({
     height: 0,
     width: 0,
     ifhidden: '',
+    BGI:'https://s1.ax1x.com/2023/04/12/ppXAqlq.png',
+    ifsigned:0,
   },
   /**记录开始点 */
   bindtouchstart: function(e) {
     this.data.context.moveTo(e.changedTouches[0].x, e.changedTouches[0].y);
     this.setData({
-      ifhidden:'hidden'
+      ifhidden:'hidden',
+      BGI:'https://s1.ax1x.com/2023/04/09/ppbuMAe.png',
+      ifsigned:1,
     })
   },
   /**记录移动点，刷新绘制 */
@@ -39,20 +43,63 @@ Page({
     this.data.context.setStrokeStyle('#000000')
     this.data.context.setLineWidth(2)
     this.data.context.setFontSize(20)
-    let str = "签名区域";
-    this.data.context.fillText(str, Math.ceil((this.data.width - this.data.context.measureText(str).width) / 2), Math.ceil(this.data.height / 2) - 20)
     this.data.context.draw()
+    this.setData({
+      BGI:'https://s1.ax1x.com/2023/04/12/ppXAqlq.png',
+      ifsigned:0,
+    })
   },
+
+  submit: function(){
+    wx.showModal({
+      title: '提示',
+      content: '是否确认提交？',
+      success:  (res) => {
+        if (res.confirm) {//点击了确定
+          if(this.data.ifsigned==0){
+            wx.showToast({
+              title: '你还未签字',
+              icon: 'none',
+              duration: 2000
+            })
+          }
+          else{
+            wx.showToast({
+              title: '成功',
+              icon: 'success',
+              duration: 2000
+            })
+            wx.reLaunch({
+              url: '../END/END'
+            })
+          }
+        } else {//点击取消
+          this.clear()
+        }
+      }
+    })
+    /*wx.canvasToTempFilePath({
+      x: 100,
+      y: 200,
+      width: 50,
+      height: 50,
+      destWidth: 100,
+      destHeight: 100,
+      canvasId: 'firstCanvas',
+      success(res) {
+        console.log(res.tempFilePath)
+      }
+    })*/
+  },
+
   /**导出图片 */
   onLoad: function() {
     this.setData({
       width : wx.getSystemInfoSync().screenWidth,
       height : wx.getSystemInfoSync().screenHeight,
     })
-    
     console.log(this.width);
     console.log(this.height);
-    
   },
   onShow: function() {
     let query = wx.createSelectorQuery();
@@ -72,8 +119,6 @@ Page({
       context.setStrokeStyle('#00ff00')
       context.setLineWidth(2)
       context.setFontSize(20)
-      let str = "签名区域";
-      context.fillText(str, Math.ceil((width - context.measureText(str).width) / 2), Math.ceil(height / 2) - 20)
       context.draw()
     });
   }

@@ -1,0 +1,22 @@
+/* pages/To_Sign_Page/To_Sign_Page.wxss */
+page{
+  height: 100%;
+}
+.root{
+    background-color: #86a8ef;
+    position:relative;
+    height: 100%;
+}
+.content{
+    height: 40%;
+    background-color: white;
+    border-radius: 5%;
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 30%;
+    font-size:xx-large;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}

@@ -1,0 +1,10 @@
+<view class="root">
+    <view class="content">
+        <view style="margin-top:20%">
+        恭喜你
+        </view>
+        <view >
+        已完成所有内容
+        </view>
+    </view>
+</view>
